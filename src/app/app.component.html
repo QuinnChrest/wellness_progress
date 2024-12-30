@@ -1,3 +1,12 @@
-<p-menubar [model]="items" />
+<p-menubar [model]="items">
+  <ng-template #end>
+    <p-button
+      (onClick)="toggleDarkMode()"
+      [icon]="dark ? 'pi pi-moon' : 'pi pi-sun'"
+      [rounded]="true"
+      severity="contrast"
+    />
+  </ng-template>
+</p-menubar>
 
 <router-outlet />
